@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: helloworld-controller
+spec:
+  replicas: 4
+  selector:
+    app: helloworld
+  template:
+    metadata:
+      labels:
+        app: helloworld
+    spec:
+      containers:
+      - name: v3
+        image: yaviram/myrepo:v3
+        ports:
+        - name: nodejs-port
+          containerPort: 3000
