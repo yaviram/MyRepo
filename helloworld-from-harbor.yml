@@ -6,8 +6,8 @@ metadata:
     app: helloworld
 spec:
   containers:
-  - name: k8s-demo
-    image: yaviram/myrepo:latest
+  - name: k8s
+    image: harbor.corp.local/library/project1:v1
     ports:
     - name: nodejs-port
       containerPort: 3000
